@@ -33,5 +33,16 @@ if __name__ == '__main__':
     # Elegir un marker a elección
 
     # Crear acá su gráfico
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    ax.plot(x, y, c='darkcyan', label= "y = tanh(x)")
+    ax.set_title ("Scatter Graphic", color ="r")
+    ax.set_xlabel ("Eje Y", color= "y")
+    ax.set_ylabel ("Eje x", color= "y")
+    ax.scatter(x, y, c='darkcyan')
+    ax.set_facecolor('whitesmoke')
+    ax.grid('solid')
+    plt.show()
+
 
     print("terminamos")

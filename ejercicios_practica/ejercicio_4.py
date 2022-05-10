@@ -53,5 +53,37 @@ if __name__ == '__main__':
     # Colocar una grilla a elección
 
     # Crear acá su gráfico
+    fig= plt.figure()
+    fig.suptitle("4 Graphics in 1 figure", fontsize= "12")
+    ax1 = fig.add_subplot (2,2,1)
+    ax2 = fig.add_subplot (2,2,2)
+    ax3 = fig.add_subplot (2,2,3)
+    ax4 = fig.add_subplot (2,2,4)
 
+    ax1.plot(x,y1, color= "green", ls="dashed", label =" y= x**2")
+    ax1.set_facecolor ("whitesmoke")
+    ax1.set_title ("X raised to the second power")
+    ax1.legend()
+    ax1.grid (ls="dashed")
+
+
+    ax2.plot(x,y2, color= "red", ls="dashed", label =" y= x**3")
+    ax2.set_facecolor ("whitesmoke")
+    ax2.set_title ("X raised to the third power")
+    ax2.legend()
+    ax2.grid (ls="dashed")
+
+    ax3.plot(x,y3, color= "blue", ls="dashed", label =" y= x**4")
+    ax3.set_facecolor ("whitesmoke")
+    ax3.set_title ("X raised to the power of four")
+    ax3.legend()
+    ax3.grid (ls="dashed")
+
+    ax4.plot(x,y4, color= "grey", ls="dashed", label =" y= square_root(x)")
+    ax4.set_facecolor ("whitesmoke")
+    ax4.set_title ("X square root")
+    ax4.legend()
+    ax4.grid (ls="dashed")
+
+    plt.show()
     print("terminamos")
